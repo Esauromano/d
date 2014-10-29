@@ -1,0 +1,676 @@
+
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="en"><![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><!--<![endif]-->
+<head><title>LaCostaTV | Periodismo con personalidad | Magazine</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="description" content="La Costa TV - Magazine / Periodismo Con Personalidad, El estilo de vida y los eventos destacados de la sociedad">
+<meta name="keywords" content="Moda, Lifestyle, Acapulco, Yates, Golf, Política, Cultura, Pesca, Cine, NightLife,">
+
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="style.css" media="print" />
+<link rel="stylesheet" type="text/css" href="icons.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="animate.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="responsive.css" media="screen" />
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,500" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,800,700,900' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=EmulateIE8; IE=EDGE" /><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script src = 'http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js'></script>
+<script src = 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="jquery.zrssfeed.min.js" type="text/javascript"></script>
+<script src="jquery.zframework.js" type="text/javascript"></script>
+
+
+   <script type="text/javascript" charset="utf-8">
+    var $ = jQuery.noConflict();
+    $(window).load(function() {
+    $('.flexslider').flexslider({
+          animation: "fade"
+    });
+	$(function() {
+		$('.show_menu').click(function(){
+				$('.menu').fadeIn();
+				$('.show_menu').fadeOut();
+				$('.hide_menu').fadeIn();
+		});
+		$('.hide_menu').click(function(){
+				$('.menu').fadeOut();
+				$('.show_menu').fadeIn();
+				$('.hide_menu').fadeOut();
+		});
+	});
+  });
+</script>
+
+<script type="text/javascript">
+        $(document).ready(function() {
+       
+       today=new Date()
+       thisDay=today.getDay()  
+        $("#saturday").hide();
+       
+        if (thisDay == 6){
+            $("#saturday").show();
+        }
+        });
+</script>
+
+
+<!--ESTilo GOOGLE SEARCH-->
+<style type="text/css">
+
+.anchow{ height:50px; overflow: hidden;}
+#zticker {color: #b6b6b6;}
+#zticker a {color: #b6b6b6;}
+</style>
+<!-- HANDLEBARS -->
+<script type = 'text/x-handlebars-template' id = 'template01'>
+{{#coco01}}
+<div class="title color5"><h4>Sociales</h4></div>
+	<div class="grid_6 alpha relative">	
+	<a class="hover-shadow" href="/articulo/{{enlace}}">
+{{#with imgs.[0]}}
+<img src="{{this}}" alt="">
+{{/with}}	</a>	</div>
+		<div class="grid_6 omega">
+		<div class="post_day_content">
+		<h3> <a href="/articulo/{{enlace}}">{{titulo}}</a>  </h3>
+		<div class="meta mb">{{fecha}}</div>
+		<p> {{{texto}}}</p>
+		</div>
+		</div>
+{{/coco01}}
+</script>
+
+<script type = 'text/x-handlebars-template' id = 'template3'>
+{{#coco3}}
+<div class="title color6"><h4>Lifestyle</h4></div>
+	<div class="grid_6 alpha relative">
+	<a class="hover-shadow" href="/articulo/{{enlace}}">
+{{#with imgs.[0]}}
+	<img src="{{this}}" alt="{{titulo}}">
+{{/with}}	</a>	</div>
+		<div class="grid_6 omega">
+		<div class="post_day_content">
+		<h3> <a href="/articulo/{{enlace}}">{{titulo}}</a>  </h3>
+		<div class="meta mb">{{fecha}}</div>
+		<p> {{{texto}}}</p>
+		</div>
+		</div>
+{{/coco3}}
+</script>
+
+<script type = 'text/x-handlebars-template' id = 'template5'>
+{{#coco5}}
+<div class="title color8"><h4>Cultura</h4></div>
+	<div class="grid_6 alpha relative">
+<a class="hover-shadow" href="/articulo/{{enlace}}">
+{{#with imgs.[0]}}
+	<img src="{{this}}" alt="">
+{{/with}}</a>
+		</div>
+		<div class="grid_6 omega">
+		<div class="post_day_content">
+		<h3> <a href="/articulo/{{enlace}}">{{titulo}}</a> </h3>
+		<div class="meta mb">{{fecha}}</div>
+		<p> {{{texto}}}</p>
+		</div>
+		</div>
+{{/coco5}}
+</script>
+
+<script type = 'text/x-handlebars-template' id = 'template6'>
+{{#coco6}}
+<div class="title"><h4>Política</h4></div>
+	<div class="relative hover-shadow mb">
+	<a class="hover-shadow" href="/articulo/{{enlace}}">
+	{{#with imgs.[0]}}
+	<img src="{{this}}" alt="">
+{{/with}}</a>
+		<div class="r_content">	
+		<div class="r_title"><a href="/articulo/{{enlace}}">{{titulo}}</a> </div>
+	</div>
+	</div>
+	{{/coco6}}
+</script>
+
+
+<script type = 'text/x-handlebars-template' id = 'template7'>
+{{#coco7}}
+<div class="title"><h4>Negocios</h4></div>
+	<div class="relative hover-shadow mb">
+	<a class="hover-shadow" href="/articulo/{{enlace}}">
+	{{#with imgs.[0]}}
+	<img src="{{this}}" alt="">
+{{/with}}</a>
+		<div class="r_content">	
+		<div class="r_title"><a href="/articulo/{{enlace}}">{{titulo}}</a> </div>
+	</div>
+	</div>
+	{{/coco7}}
+	</script>
+
+<script type = 'text/x-handlebars-template' id = 'template8'>
+{{#coco8}}
+<div class="title"><h4>Deportes</h4></div>
+	<div class="relative hover-shadow mb">
+	<a class="hover-shadow" href="/articulo/{{enlace}}">
+	{{#with imgs.[0]}}
+	<img src="{{this}}" alt="">
+{{/with}}</a>
+		<div class="r_content">	
+		<div class="r_title"><a href="/articulo/{{enlace}}">{{titulo}}</a> </div>
+	</div>
+	</div>
+	{{/coco8}}
+	</script>
+
+<script type = 'text/x-handlebars-template' id = 'templatex'>
+{{#cocox}}
+	<li>
+	<a href="/articulo/{{enlace}}">
+	<img src="{{imgs.[0]}}" alt="" title=""/></a>
+	
+	<div class="flex-caption">
+     <div class="caption_title_line"><h2>
+<a href="/articulo/{{enlace}}">
+{{titulo}}</a></h2></div>
+                </div>
+	    	</li>
+{{/cocox}}
+</script>
+
+<script type = 'text/x-handlebars-template' id = 'templatec'>
+{{#cococ}}
+<div class="title"><h4>Tecnología</h4></div>
+	<div class="relative hover-shadow mb">
+	<a class="hover-shadow" href="/articulo/{{enlace}}">
+	{{#with imgs.[0]}}
+	<img src="{{this}}" alt="">
+{{/with}}</a>
+		<div class="r_content">	
+		<div class="r_title"><a href="/articulo/{{enlace}}">{{titulo}}</a> </div>
+	</div>
+	</div>
+	{{/cococ}}
+	</script>
+
+<!-- //////////// VIDEO ////////////// -->
+<script type = 'text/x-handlebars-template' id = 'templatevideo'>
+	{{#vidio}}
+		<div class="title"><h4>Video</h4></div>
+		<div class="relative hover-shadow mb">
+			<div class="r_content">	
+				<div class="r_title">
+					<a href="/articulo/{{enlace}}">{{titulo}}</a> 
+				</div>
+			</div>
+			{{# if videos}}
+      			<iframe width="560" height="315" src="//www.youtube.com/embed/{{videos}}" frameborder="0" allowfullscreen></iframe>
+  			{{/ if}}
+  			</div>
+	{{/vidio}}
+</script>
+
+ <!-- //////////// MINI VIDEO ////////////// -->
+<script type = 'text/x-handlebars-template' id = 'tempminiv'>
+	{{#minividio}}
+		<div class="title"><h4>Video</h4></div>
+		<div class="relative hover-shadow mb">
+			{{# if videos}}
+      			<iframe width="100%" height="315" src="//www.youtube.com/embed/{{videos}}" frameborder="0" allowfullscreen></iframe>
+  			{{/ if}}
+  			<div class="r_content">	
+				<div class="r_title">
+					<a href="/articulo/{{enlace}}">{{titulo}}</a> 
+				</div>
+			</div>
+		</div>
+	{{/minividio}}
+</script>
+
+
+<!-- / HANDLEBARS -->
+
+<script type="text/javascript">
+$(document).ready(function () {
+	$('#zticker').rssfeed('http://guerrero.gob.mx/feed/',{
+		header: false,
+		titletag: 'div',
+		date: false,
+		content: false
+	}, function(e) {
+		$.zazar.ticker({selector: '#zticker ul'});
+	});
+});
+</script>
+
+
+
+
+
+</head>
+<body>
+	<div id="layout" class="boxed">
+		<header id="header">
+			<div class="a_head">
+				<div class="row clearfix">
+					<div class="breaking_news lefter">
+						<div class="freq_out">
+							<div class="freq"><div class="inner_f"></div><div id="layerBall"></div></div>
+						</div><!-- /freq -->
+						
+						<div id="zticker"></div>
+
+					</div><!-- /breaking news -->
+
+					<div class="right_bar anchow">
+<script>
+  (function() {
+    var cx = '010273939302598804870:rsu-o-iomba';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+
+						
+					</div><!-- /right bar -->
+				</div><!-- /row -->
+			</div><!-- /a head -->
+
+			
+			<div class="grid_12">
+				<div class="row clearfix">
+					<div class="right_bar">
+							<script type="text/javascript">document.write("<iframe src=\"adssup2.html\" frameborder=\"0\" style=\"border:none; overflow:hidden; width:1170px; height:150px;\"   scrolling=\"no\"></iframe>");</script>
+					</div><!--RIGHT_BAR-->
+				</div><!--ROW-->
+			</div><!--GRID_12-->
+
+		<div class="b_head">
+		<div class="row clearfix">
+
+				<div class="grid_3">
+					<a href="https://www.facebook.com/RevistaLaCosta" target="_new" class="bottomtip" title="LacostaTv"><img class="redesocial" src="facebook_logo_lacosta.png" alt="La Costa Tv Periodismo con pesonalidad"></a>
+					<a href="https://twitter.com/LacostaTV" title="@LacostaTV" target="_new"><img class="redesocial" src="twitter_logo_lacosta.png" alt="La Costa Tv Periodismo con pesonalidad"></a>
+					<a href="https://plus.google.com/u/0/113512815858514033766/about" target="_new" title="lacostatv"><img class="redesocial" src="googleplus_logo_lacosta.png" alt="La Costa Tv Periodismo con pesonalidad"></a>
+					<a href="https://www.youtube.com/channel/UC1i_czQlsxEKDel--9oJIHQ" target="_new" title="LA COSTA TV	"><img class="redesocial" src="youtube_logo_lacosta.png" alt="La Costa Tv Periodismo con pesonalidad"></a>
+					<a href="http://instagram.com/lacostatv" target="_new" title="lacostatv"><img class="redesocial" src="instagram_logo_lacosta.png" alt="La Costa Tv Periodismo con pesonalidad"></a>
+					
+
+					</div>
+	
+					<div class="grid_9">
+						<div class="grid_8">
+							<img src="logo_lacosta_2.png">
+						</div>
+						<div class="grid_4">
+						<img src="revista_2.png">
+						</div>
+					</div><!--GRID_9-->
+
+				</div><!-- ROW -->
+			</div><!--B HEAD-->
+
+<div class="row clearfix">
+				
+				<div class="sticky_true">
+					<div class="c_head clearfix">
+						<nav>
+							<ul class="sf-menu">
+								<li class="current colordefault home_class"><a href="index.html"><i class="icon-home"></i></a></li>
+								
+								<li class="colordefault"><a href="/sociales/4/0">Sociales</a></li>
+								<li class="colordefault"><a href="/lifestyle/4/0">Lifestyle</a></li>
+								<li class="colordefault"><a href="/cultura/4/0">Cultura</a></li>
+								<li class="colordefault"><a href="/tecnologia/4/0">Tecnología</a></li>
+								<li class="colordefault"><a href="/deportes/4/0">Deportes</a></li>
+							    <li class="colordefault"><a href="/politica/4/0">Política</a></li>
+								<li class="colordefault"><a href="/negocios/4/0">Negocios</a></li>
+								<li class="colordefault"><a href="/video/4/0">Videos</a></li>				
+								<li class="colordefault"><a href="/enlacostaopinan/4/0">En Lacosta Opinan</a></li>
+							</ul><!-- /menu -->
+						</nav><!-- /nav -->
+
+
+					</div><!-- /c head -->
+				</div><!-- /sticky -->
+			</div><!-- /row -->
+		</header><!-- /header -->
+		<div class="page-content">	<div class="row clearfix">
+				<div class="grid_9 alpha">
+					<div class="ipress_slider mbf">
+						
+					<script type="text/javascript">document.write("<iframe src=\"fecha.html\" frameborder=\"0\" style=\"border:none; overflow:hidden; width:100%; height:570px;\" scrolling=\"no\"></iframe>");</script>
+                      
+                      </div>
+					<div class="grid_8 omega posts righter">
+						<div class="posts_block mbf clearfix">
+
+
+<!--STREAM SÁBADO -->
+<!--
+<div id="saturday">
+		<div class="title"><h4>Programa en vivo</h4></div>
+		<div class="relative hover-shadow mb">
+			<div class="r_content">	
+			</div>
+				<iframe src="http://www.ustream.tv/embed/14020983?autoplay=false" width="480" height="392" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>
+				<br /><a href="http://www.ustream.tv" style="font-size: 12px; line-height: 20px; font-weight: normal; text-align: left;" target="_blank">Broadcast live streaming video on Ustream</a>
+  			</div>
+</div>
+-->
+<!--FIN STREAM SABADO-->
+						
+
+						<!-- / BGN VIDEOS -->
+						<div class="posts_block mbf clearfix">
+							<div id="invideo"></div>
+						</div>
+						<!-- / END VIDEOS -->
+
+						<div class="posts_block mbf clearfix">
+							<div id="estilo"></div>
+						</div><!-- posts block Music -->
+						
+
+						<div class="posts_block mbf clearfix">
+							<div id="sociales01"></div>
+						</div><!-- posts block Music -->
+
+
+						<div class="posts_block mbf clearfix">
+							<div id="cultura">
+							</div>
+						</div><!-- posts block People -->
+					</div><!-- end grid9 -->
+</div>
+					<div class="grid_4 alpha sidebar sidebar_b">
+				
+						<div class="widget">
+							<div id="slidec"></div>
+						</div>
+						<!-- widget -->
+						<div class="widget">
+							<div id="deportes"></div>
+						</div>
+						<!-- widget -->
+						<div class="widget">
+							<div id="negocios"></div>
+						</div>
+						<!-- widget -->
+						<div class="widget">
+							<div id="politica"></div>
+						</div><!-- widget -->
+
+
+
+						<div class="widget">
+							<div id="minivid"></div>
+						</div><!-- widget -->
+
+
+
+
+					</div><!-- end grid9 -->
+				</div><!-- end grid9 -->
+
+				<div class="grid_3 omega sidebar sidebar_a">
+					
+					<div class="widget">
+						<div class="ads_widget clearfix">
+
+<script type="text/javascript">document.write("<iframe src=\"ad1sociales2.html\" frameborder=\"0\" style=\"border:none; overflow:hidden; width:300px; height:600px;\" scrolling=\"no\"></iframe>");</script>
+<br>
+<script type="text/javascript">document.write("<iframe src=\"ad1sociales.html\" frameborder=\"0\" style=\"border:none; overflow:hidden; width:300px; height:300px;\" scrolling=\"no\"></iframe>");</script>
+							
+					</div><!-- widget -->
+					</div><!-- widget -->
+
+					<div class="widget">
+							<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FRevistaLaCosta&amp;width=300&amp;height=300&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=true&amp;appId=138798126277575" height="300"></iframe>
+						</div><!-- widget -->
+				
+
+					<div class="widget">  
+<STYLE>#qp_main115184 .qp_btna:hover input {background-color:rgb(99,185,255)!important}</STYLE><div id="qp_main115184" style="border-radius:6px;border:1px solid black;margin:0px;padding:10px;padding-bottom:2px;background-color:rgb(52,52,52);background-image:URL(http://i91.photobucket.com/albums/k286/pulselayouts/poll/poll_bg003.jpg);background-position:top right;background-repeat:no-repeat"><div style="border-radius:6px;font-family:Arial;font-size:12px;font-weight:bold;background-color:rgb(13,158,239);color:black;width:100%;filter:alpha(opacity:80);-moz-opacity:0.9;opacity:0.9;-khtml-opacity:0.9;margin-bottom:10px"><div style="padding:10px">¿Conoces el proyecto de remodelación del zócalo de Acapulco?</div></div><form id="qp_form115184" action="http://www.poll-maker.com/results115184xb4b89c39-4" method="post" target="_blank" style="display:inline;margin:0px;padding:0px"><div style="border-radius:6px"><div style="border-radius:6px;display:block;font-family:Arial;font-size:12px;color:white;padding-top:5px;padding-bottom:5px;clear:both;width:80%"><span onClick="if((!event.target?event.srcElement:event.target).tagName!='INPUT'){var c=this.childNodes[0];c.checked=(c.type=='radio'?true:!c.checked);}" style="display:block;padding-left:30px"><input style="float:left;width:25px;margin-left:-25px;margin-top:-1px;padding:0px;height:18px" name="qp_v115184" type="radio" value="1">No</span></div><div style="border-radius:6px;display:block;font-family:Arial;font-size:12px;color:white;padding-top:5px;padding-bottom:5px;clear:both;width:80%"><span onClick="if((!event.target?event.srcElement:event.target).tagName!='INPUT'){var c=this.childNodes[0];c.checked=(c.type=='radio'?true:!c.checked);}" style="display:block;padding-left:30px"><input style="float:left;width:25px;margin-left:-25px;margin-top:-1px;padding:0px;height:18px" name="qp_v115184" type="radio" value="2">Si</span></div><div style="border-radius:6px;display:block;font-family:Arial;font-size:12px;color:white;padding-top:5px;padding-bottom:5px;clear:both;width:80%"><span onClick="if((!event.target?event.srcElement:event.target).tagName!='INPUT'){var c=this.childNodes[0];c.checked=(c.type=='radio'?true:!c.checked);}" style="display:block;padding-left:30px"><input style="float:left;width:25px;margin-left:-25px;margin-top:-1px;padding:0px;height:18px" name="qp_v115184" type="radio" value="3">Mas o menos</span></div><div style="border-radius:6px;display:block;font-family:Arial;font-size:12px;color:white;padding-top:5px;padding-bottom:5px;clear:both;width:80%"><span onClick="if((!event.target?event.srcElement:event.target).tagName!='INPUT'){var c=this.childNodes[0];c.checked=(c.type=='radio'?true:!c.checked);}" style="display:block;padding-left:30px"><input style="float:left;width:25px;margin-left:-25px;margin-top:-1px;padding:0px;height:18px" name="qp_v115184" type="radio" value="999">Other</span></div><div id="qp_ot115184" style="border-radius:6px;display:block;font-family:Arial;font-size:12px;color:white;padding-top:5px;padding-bottom:5px;clear:both;width:80%"><div style="padding-left:33px">Please Specify: <input style="width:120px;position:relative;top:2px" name='qp_other115184' type=text value=''></div></div></div><div style="padding-top:10px;clear:both"><a class="qp_btna" href="#"><input name="qp_b115184" style="width:80px;height:30px;margin-right:5px;border-radius:10px;border:3px solid rgb(16,56,89);background-color:rgb(179,213,242);font-family:Arial;font-size:12px;font-weight:bold;color:rgb(0,0,0);cursor:pointer;cursor:hand" type="submit" value="Vote"></a><a class="qp_btna" href="#"><input name="qp_b115184" style="width:80px;height:30px;margin-right:5px;border-radius:10px;border:3px solid rgb(16,56,89);background-color:rgb(179,213,242);font-family:Arial;font-size:12px;font-weight:bold;color:rgb(0,0,0);cursor:pointer;cursor:hand" type="submit" value="Results"></a></div><a id="qp_a115184" style="float:right;font-family:Arial;font-size:10px;color:rgb(255,255,255);text-decoration:none;margin-top:-12px;margin-right:-5px" href="http://www.poll-maker.com">Poll Maker</a></form></div><script src="http://scripts.poll-maker.com/3012/scpolls.js" language="javascript"></script>						</div><!-- widget -->
+
+<div class="widget">
+<a class="twitter-timeline" href="https://twitter.com/LacostaTV" data-widget-id="481976560728023040">Tweets por @LacostaTV</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+			</div><!-- /grid3 sidebar A -->
+			</div><!-- /row -->
+		</div><!-- /end page content -->
+
+		<footer id="footer">
+			<div class="row clearfix">
+				<div class="footer_last">
+					<span class="copyright">© 2014 <a href="/">LaCostaTv</a>. All Rights Reserved. Powered by <a href="http://tech-mex.org">Tech-Mex.org</a>.</span>
+					<div id="toTop" class="toptip" title="Subir"><i class="icon-arrow-thin-up"></i></div>
+				</div>
+			</div>
+		</footer>
+	</div><!-- /layout -->
+
+<script type = 'text/javascript'>
+(function () {
+Handlebars.registerHelper('guion', function(titulo) {
+  var result = titulo.replace(' ' , '-');
+  return new Handlebars.SafeString(result);
+});
+
+   		})();
+
+
+
+
+<script type = 'text/javascript'>
+$(function() {
+var stemplate2 = $('#template2').html();
+var tmpl = Handlebars.compile(stemplate2);
+var xhr = $.ajax({
+url: '/api/eventos'
+});
+xhr.done(function (data) {
+var ctx = {};
+ctx.coco2 = data[0];
+var html = tmpl(ctx);
+$('#eventos').append(html);
+$('#eventos').show();
+});
+});
+</script>
+
+<script type = 'text/javascript'>
+$(function() {
+var stemplate01 = $('#template01').html();
+var tmpl = Handlebars.compile(stemplate01);
+var xhr = $.ajax({
+url: '/api/sociales'
+});
+xhr.done(function (data) {
+var ctx = {};
+ctx.coco01 = data[0];
+var html = tmpl(ctx);
+$('#sociales01').append(html);
+$('#sociales01').show();
+});
+});
+</script>
+
+<script type = 'text/javascript'>
+$(function() {
+var stemplate3 = $('#template3').html();
+var tmpl = Handlebars.compile(stemplate3);
+var xhr = $.ajax({
+url: '/api/lifestyle'
+});
+xhr.done(function (data) {
+var ctx = {};
+ctx.coco3 = data[0];
+var html = tmpl(ctx);
+$('#estilo').append(html);
+$('#estilo').show();
+});
+});
+</script>
+
+<script type = 'text/javascript'>
+$(function() {
+var stemplate5 = $('#template5').html();
+var tmpl = Handlebars.compile(stemplate5);
+var xhr = $.ajax({
+url: '/api/cultura'
+});
+xhr.done(function (data) {
+var ctx = {};
+ctx.coco5 = data[0];
+var html = tmpl(ctx);
+$('#cultura').append(html);
+$('#cultura').show();
+});
+});
+</script>
+
+<script type = 'text/javascript'>
+$(function() {
+var stemplate6 = $('#template6').html();
+var tmpl = Handlebars.compile(stemplate6);
+var xhr = $.ajax({
+url: '/api/politica'
+});
+xhr.done(function (data) {
+var ctx = {};
+ctx.coco6 = data[0];
+var html = tmpl(ctx);
+$('#politica').append(html);
+$('#politica').show();
+});
+});
+</script>
+
+<script type = 'text/javascript'>
+$(function() {
+var stemplate7 = $('#template7').html();
+var tmpl = Handlebars.compile(stemplate7);
+var xhr = $.ajax({
+url: '/api/negocios'
+});
+xhr.done(function (data) {
+var ctx = {};
+ctx.coco7 = data[0];
+var html = tmpl(ctx);
+$('#negocios').append(html);
+$('#negocios').show();
+});
+});
+</script>
+
+<script type = 'text/javascript'>
+$(function() {
+var stemplate8 = $('#template8').html();
+var tmpl = Handlebars.compile(stemplate8);
+var xhr = $.ajax({
+url: '/api/deportes'
+});
+xhr.done(function (data) {
+var ctx = {};
+ctx.coco8 = data[0];
+var html = tmpl(ctx);
+$('#deportes').append(html);
+$('#deportes').show();
+});
+});
+</script>
+
+
+<script type = 'text/javascript'>
+$(function() {
+var stemplatex = $('#templatex').html();
+var tmpl = Handlebars.compile(stemplatex);
+var xhr = $.ajax({
+url: '/api/eventos'
+});
+xhr.done(function (data) {
+var ctx = {};
+ctx.cocox = data[0];
+var html = tmpl(ctx);
+$('#slidex').append(html);
+$('#slidex').show();
+});
+});
+</script>
+
+<script type = 'text/javascript'>
+$(function() {
+var stemplatec = $('#templatec').html();
+var tmpl = Handlebars.compile(stemplatec);
+var xhr = $.ajax({
+url: '/api/tecnologia'
+});
+xhr.done(function (data) {
+var ctx = {};
+ctx.cococ = data[0];
+var html = tmpl(ctx);
+$('#slidec').append(html);
+$('#slidec').show();
+});
+});
+</script>
+<!-- /////// VIDEOS  ////////// -->
+<script type = 'text/javascript'>
+$(function() {
+var templatevid = $('#templatevideo').html();
+var tmpl = Handlebars.compile(templatevid);
+var xhr = $.ajax({
+url: '/api/videos.html'
+});
+xhr.done(function (data) {
+var ctx = {};
+ctx.vidio = data[0];
+var html = tmpl(ctx);
+$('#invideo').append(html);
+$('#invideo').show();
+});
+});
+</script>
+<!--///////// MINIVID ///////// -->
+<script type = 'text/javascript'>
+$(function() {
+var templatemv = $('#tempminiv').html();
+var tmpl = Handlebars.compile(templatemv);
+var xhr = $.ajax({
+url: '/api/videos.html'
+});
+xhr.done(function (data) {
+var ctx = {};
+ctx.minividio = data[1];
+var html = tmpl(ctx);
+$('#minivid').append(html);
+$('#minivid').show();
+});
+});
+</script>
+	<!-- Scripts -->
+		<script type="text/javascript" src="ipress.js"></script>
+		<script type="text/javascript" src="custom.js"></script>
+</body>
+</html>
